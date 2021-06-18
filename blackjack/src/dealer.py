@@ -14,12 +14,8 @@ class Dealer(Hand):
 		- (inherited) hand of cards
 	'''
 	def __init__(self):
-		Hand.__init__(self)
+		super().__init__(self)
 		self.deck = Deck()
-
-
-	def add_card(self, new_card):
-		pass
 	
 
 	def deal_card(self):
