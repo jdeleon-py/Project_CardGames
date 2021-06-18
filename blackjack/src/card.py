@@ -7,6 +7,7 @@ class Card:
 		- ability to overload == operator to compare two card objects
 		- ability to overload > operator to compare two card objects
 		- ability to overload < operator to compare two card objects
+		- ability to overload + operator to sum the player's hand
 
 	ATTRIBUTES:
 		- suit ("Spades", "Diamonds", etc...)
@@ -24,6 +25,10 @@ class Card:
 
 	def __str__(self):
 		return "{0} of {1}".format(self.rank, self.suit)
+
+
+	def __add__(self, card):
+		return self.value + card.value
 
 
 	def __eq__(self, card):
