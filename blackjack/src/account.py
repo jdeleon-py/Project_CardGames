@@ -23,25 +23,25 @@ class Account:
 
 	def deposit(self, amount):
 		self.balance += amount
-		print("Deposit accepted!")
+		return "Deposit accepted!"
 
 
 	def withdraw(self, amount):
 		if self.balance >= amount:
 			self.balance -= amount
-			print("Withdraw accepted!")
-		else: print("Withdraw not accepted!")
+			return "Withdraw accepted!"
+		else: return "Withdraw not accepted!"
 
 
 if __name__ == "__main__":
 	account = Account("Player", 1000)
 	print('{}\n'.format(account))
 
-	account.deposit(500)
+	print('{}'.format(account.deposit(500)))
 	print('{}\n'.format(account))
 
-	account.withdraw(800)
+	print('{}'.format(account.withdraw(800)))
 	print('{}\n'.format(account))
 
-	account.withdraw(800)
+	print('{}'.format(account.withdraw(800)))
 	print('{}\n'.format(account))
