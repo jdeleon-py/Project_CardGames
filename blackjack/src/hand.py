@@ -5,6 +5,7 @@ from card import Card
 class Hand:
 	'''
 	METHODS:
+		- ability to display all the cards in a hand
 		- ability to add cards to a sub-array of cards (hand)
 		- ability to sum all cards in the hand to produce a value relevant to the game
 		- <possible base class for player and dealer object>
@@ -17,9 +18,13 @@ class Hand:
 		self.sum = 0
 
 
+	def display_hand(self):
+		print("Hand:")
+		for card in self.cards: print('{}'.format(card))
+
+
 	def hand_sum(self):
-		for card in self.cards:
-			self.sum += card
+		for card in self.cards: self.sum += card.value
 		return self.sum
 
 
@@ -28,4 +33,12 @@ class Hand:
 
 
 if __name__ == "__main__":
-	pass
+	hand = Hand()
+
+	hand.add_card(Card("Diamonds", "Ace"))
+	hand.add_card(Card("Clubs", "Eight"))
+	hand.add_card(Card("Spades", "Jack"))
+
+	hand.display_hand()
+
+	print("Hand sum: {}".format(hand.hand_sum()))
