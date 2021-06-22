@@ -17,7 +17,6 @@ class Dealer(Hand):
 		Hand.__init__(self)
 		self.deck = Deck()
 	
-
 	def deal_card(self):
 		return self.deck.deck.pop(0)
 

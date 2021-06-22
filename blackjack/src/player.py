@@ -20,10 +20,8 @@ class Player(Hand):
 		self.name = name
 		self.account = Account(self.name, 1000)
 
-
 	def __str__(self):
 		return '{}'.format(self.account)
-
 
 	def place_bet(self):
 		bet_input = int(input("Enter an amount you want to bet: "))

@@ -17,15 +17,12 @@ class Hand:
 		self.cards = []
 		self.sum = 0
 
-
 	def display_hand(self):
 		for i in range(0, len(self.cards)): print("Hand Card #{0}: {1}".format(i + 1, self.cards[i]))
-
 
 	def hand_sum(self):
 		for card in self.cards: self.sum += card.value
 		return self.sum
-
 
 	def add_card(self, new_card):
 		self.cards.append(new_card)

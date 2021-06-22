@@ -16,15 +16,12 @@ class Account:
 		self.name = name
 		self.balance = balance
 
-
 	def __str__(self):
 		return "Account Name: {0}; Account Balance: {1}".format(self.name, self.balance)
-
 
 	def deposit(self, amount):
 		self.balance += amount
 		return "Deposit accepted!"
-
 
 	def withdraw(self, amount):
 		if self.balance >= amount:

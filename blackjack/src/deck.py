@@ -19,7 +19,6 @@ class Deck:
 		self.deck = [Card(suit, rank) for rank in Deck.RANK for suit in Deck.SUIT]
 		self.shuffle()
 
-
 	def shuffle(self):
 		return random.shuffle(self.deck)
 

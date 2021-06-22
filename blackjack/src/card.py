@@ -22,22 +22,17 @@ class Card:
 		self.rank = rank
 		self.value = Card.VALUE[self.rank]
 
-
 	def __str__(self):
 		return "{0} of {1}".format(self.rank, self.suit)
-
 
 	def __add__(self, card):
 		return self.value + card.value
 
-
 	def __eq__(self, card):
 		return self.value == card.value
 
-
 	def __gt__(self, card):
 		return self.value > card.value
-
 
 	def __lt__(self, card):
 		return self.value < card.value
