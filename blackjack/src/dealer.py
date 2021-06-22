@@ -29,9 +29,7 @@ if __name__ == "__main__":
 	for i in range(0, 3): print("Card #{0}: {1}".format(i + 1, dealer.deal_card()))
 
 	# Dealer deals cards that are then added to their own hand
-	dealer.add_card(dealer.deal_card())
-	dealer.add_card(dealer.deal_card())
-	dealer.add_card(dealer.deal_card())
+	for _ in range(0, 3): dealer.add_card(dealer.deal_card())
 
 	# Cards in hand are displayed
 	dealer.display_hand()

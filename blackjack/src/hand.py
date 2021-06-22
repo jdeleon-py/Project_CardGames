@@ -19,8 +19,7 @@ class Hand:
 
 
 	def display_hand(self):
-		print("Hand:")
-		for card in self.cards: print('{}'.format(card))
+		for i in range(0, len(self.cards)): print("Hand Card #{0}: {1}".format(i + 1, self.cards[i]))
 
 
 	def hand_sum(self):

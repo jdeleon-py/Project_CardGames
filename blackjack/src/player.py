@@ -22,12 +22,20 @@ class Player(Hand):
 
 
 	def __str__(self):
-		return "{}".format(self.name)
+		return '{}'.format(self.account)
 
 
 	def place_bet(self):
-		pass
+		bet_input = int(input("Enter an amount you want to bet: "))
+		print('{}'.format(self.account.withdraw(bet_input)))
 
 
 if __name__ == "__main__":
-	pass
+	player = Player("Player")
+
+	# if testing for adding cards to hand, see dealer.py
+
+	# place bets
+	for _ in range(0, 3):
+		player.place_bet()
+		print('{}\n'.format(player))
