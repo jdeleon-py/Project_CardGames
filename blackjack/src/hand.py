@@ -8,7 +8,7 @@ class Hand:
 		- ability to display all the cards in a hand
 		- ability to add cards to a sub-array of cards (hand)
 		- ability to sum all cards in the hand to produce a value relevant to the game
-		- <possible base class for player and dealer object>
+		- <base class for player and dealer object>
 
 	ATTRIBUTES:
 		- sub-array of card objects to be added (smaller than a deck)

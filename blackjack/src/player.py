@@ -16,7 +16,7 @@ class Player(Hand):
 		- bank account
 	'''
 	def __init__(self, name):
-		super().__init__(self)
+		Hand.__init__(self)
 		self.name = name
 		self.account = Account(self.name, 1000)
 
